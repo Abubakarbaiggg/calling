@@ -1,0 +1,179 @@
+.dialer-layout {
+    min-height: 100vh;
+    background: #f0f2f5;
+}
+
+.dialer-content {
+    min-width: 0;
+    padding: 22px;
+    background: #f0f2f5;
+}
+
+.agent-dashboard {
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+}
+
+.agent-status-strip {
+    min-height: 48px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.agent-status-strip > .ant-tag:first-child {
+    justify-self: start;
+}
+
+.agent-status-strip > .ant-tag:last-child {
+    justify-self: end;
+}
+
+.agent-status-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.agent-status-meta .ant-tag {
+    margin-inline-end: 0;
+    color: #222;
+    background: #fafafa;
+    border-color: #d9d9d9;
+}
+
+.agent-welcome {
+    padding: 12px 20px 4px;
+    text-align: center;
+}
+
+.agent-welcome .ant-typography-title {
+    margin: 0 0 20px;
+    color: #202124;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.agent-welcome .ant-typography-paragraph {
+    margin-bottom: 18px;
+    color: #202124;
+    font-size: 17px;
+}
+
+.status-word--ready,
+.queue-name {
+    color: #259b35;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.agent-queue-status {
+    display: grid;
+    grid-template-columns: 1.2fr 1.15fr 1.2fr 1fr 0.8fr 0.7fr;
+    margin: 0 24px 24px;
+    border: 1px solid #ededed;
+    border-radius: 2px;
+}
+
+.status-cell {
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-right: 1px solid #ededed;
+    color: #202124;
+    font-size: 13px;
+}
+
+.status-cell:nth-child(2n) {
+    background: #fff;
+}
+
+.status-cell--label {
+    background: #fafafa;
+    font-weight: 600;
+}
+
+.status-cell .ant-tag {
+    margin-inline-end: 0;
+}
+
+.script-panel.ant-card {
+    max-width: 410px;
+    border-radius: 2px;
+}
+
+.script-panel .ant-card-head {
+    min-height: 56px;
+}
+
+.script-panel .ant-card-head-title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.script-panel .ant-card-body {
+    min-height: 72px;
+}
+
+@media (max-width: 900px) {
+    .dialer-content {
+        padding: 14px;
+    }
+
+    .agent-status-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .agent-status-meta {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .agent-queue-status {
+        grid-template-columns: 1fr 1fr;
+        margin: 0 14px 14px;
+    }
+
+    .status-cell:nth-child(2n) {
+        border-right: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .dialer-content {
+        padding: 10px;
+    }
+
+    .agent-status-meta {
+        align-items: center;
+        gap: 4px;
+    }
+
+    .agent-status-meta .ant-tag {
+        font-size: 11px;
+    }
+
+    .agent-welcome {
+        padding-inline: 12px;
+    }
+
+    .agent-welcome .ant-typography-paragraph {
+        font-size: 15px;
+    }
+
+    .agent-queue-status {
+        margin: 0 10px 10px;
+    }
+
+    .status-cell {
+        padding-inline: 8px;
+        font-size: 12px;
+    }
+}
